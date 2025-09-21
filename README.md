@@ -1,69 +1,139 @@
-# React + TypeScript + Vite
+# MERN ThinkBoard - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern note-taking application built with React, TypeScript, and Vite. This is the frontend part of the MERN ThinkBoard project.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern UI**: Built with React 18 and TypeScript
+- **Responsive Design**: Fully responsive using Tailwind CSS
+- **Fast Development**: Powered by Vite for lightning-fast HMR
+- **Note Management**: Create, read, update, and delete notes
+- **Real-time Updates**: Seamless integration with backend API
+- **Type Safety**: Full TypeScript support for better development experience
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18** - UI Library
+- **TypeScript** - Type Safety
+- **Vite** - Build Tool & Dev Server
+- **Tailwind CSS** - Styling
+- **Axios** - HTTP Client
+- **React Hot Toast** - Notifications
+- **ESLint** - Code Linting
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📋 Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js (v16 or higher)
+- npm or yarn package manager
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/TanMinhNgo/mern-thinkboard-frontend.git
+   cd mern-thinkboard-frontend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Environment Setup**
+   
+   Create a `.env` file in the root directory:
+   ```env
+   MODE
+   BACKEND_URL
+   ```
+
+4. **Start development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. **Open your browser**
+   
+   Navigate to `http://localhost:5173`
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Navbar.tsx
+│   ├── NoteCard.tsx
+│   ├── NotesNotFound.tsx
+│   └── RateLimitedUI.tsx
+├── pages/              # Page components
+│   └── HomePage.tsx
+├── lib/                # Utilities and configurations
+│   └── axios.ts
+├── App.tsx             # Main App component
+└── main.tsx           # Entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔧 Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🌐 Backend Integration
+
+This frontend connects to the MERN ThinkBoard backend API. Make sure to:
+
+1. Start the backend server first
+2. Update the `BACKEND_URL` in your `.env` file
+3. Ensure CORS is properly configured on the backend
+
+**Backend Repository**: [mern-thinkboard-backend](https://github.com/TanMinhNgo/mern-thinkboard-backend)
+
+## 🚀 Deployment
+
+### Production Build
+
+```bash
+npm run build
 ```
+
+The build files will be generated in the `dist/` directory.
+
+### Deploy to Vercel/Netlify
+
+1. Connect your GitHub repository
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
+4. Add environment variables in deployment settings
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Tan Minh Ngo**
+- GitHub: [@TanMinhNgo](https://github.com/TanMinhNgo)
+
+## 🙏 Acknowledgments
+
+- React team for the amazing library
+- Vite team for the super fast build tool
+- Tailwind CSS for the utility-first CSS framework
+
+---
+
+⭐ Star this repo if you find it helpful!
