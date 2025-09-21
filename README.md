@@ -45,8 +45,8 @@ A modern note-taking application built with React, TypeScript, and Vite. This is
    
    Create a `.env` file in the root directory:
    ```env
-   MODE
-   BACKEND_URL
+   MODE=development
+   BACKEND_URL=http://localhost:8080
    ```
 
 4. **Start development server**
